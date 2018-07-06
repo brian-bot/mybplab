@@ -10,7 +10,7 @@ output: pdf_document
 knitr::opts_chunk$set(message=FALSE, warning=FALSE)
 ```
 
-```{r tmp, include=FALSE}
+```{r loadLibraries, include=FALSE}
 require(synapser)
 require(tableone)
 require(plyr)
@@ -23,15 +23,6 @@ synLogin()
 ```
 
 ```{r loadData, include=FALSE, cache=TRUE}
-
-require(synapser)
-require(tableone)
-require(plyr)
-require(dplyr)
-require(utils)
-require(knitr)
-require(ggplot2)
-synLogin()
 
 ## SOME VARIABLES THAT ARE SET FOR USE THROUGHOUT
 releasedVersions <- c("version 1.0.3, build 72",
