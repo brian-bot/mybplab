@@ -3,3 +3,8 @@
 .RData
 .Ruserdata
 mybplab.Rproj
+mybplabOverview_cache/
+*.html
+*.pdf
+mybplabOverview_files/
+
