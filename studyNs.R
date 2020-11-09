@@ -8,7 +8,8 @@ synLogin()
 releasedVersions <- c("version 1.0.3, build 72",
                       "version 1.0.5, build 75",
                       "version 1.0.6, build 76",
-                      "version 1.1.0, build 82")
+                      "version 1.1.0, build 82",
+                      "version 1.1.4, build 86")
 
 bg <- synTableQuery("SELECT * FROM syn11855399 WHERE uploadDate > '2018-03-14' AND dataGroups IS NULL AND userSharingScope='ALL_QUALIFIED_RESEARCHERS'")
 aa <- as.data.frame(bg)
@@ -58,3 +59,16 @@ names(aa) <- gsub(" ", "_", names(aa), fixed=TRUE)
 
 table(cc$answers.cuff, useNA = "always")/nrow(cc)
 
+
+# sss <- aa[ grep("Samsung", aa$phoneInfo, fixed=TRUE), ]
+# 
+# thisThing <- strsplit(sss$phoneInfo, "-", fixed=TRUE)
+# res <- sapply(thisThing, function(x){
+#   if(length(x) < 2){
+#     return(NULL)
+#   } else{
+#     return(substr(x[[2]], nchar(x[[2]]), nchar(x[[2]])))
+#   }
+# })
+# res <- unlist(res)
+# table(res)
